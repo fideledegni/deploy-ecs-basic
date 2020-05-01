@@ -44,14 +44,14 @@ integrations:
   # adding awsKeys integration so that credentials are available to CI Job
   # http://docs.shippable.com/platform/integration/aws-keys/
   hub:
-    - integrationName: dr-aws-keys
+    - integrationName: aws-keys-integration
       type: amazonKeys
 
 
 resources:
   - name: deploy-ecs-basic-image
     type: image
-    integration: dr-aws-keys
+    integration: aws-keys-integration
     pointer:
       sourceName: "844021734511.dkr.ecr.eu-west-3.amazonaws.com/deploy-ecs-basic"
     seed:
@@ -80,7 +80,7 @@ resources:
 
   - name: deploy-ecs-basic-ecs-cluster
     type: cluster
-    integration: dr-aws
+    integration: aws-iam-integration
     pointer:
       sourceName : "deploy-ecs-basic" #name of the cluster to which we are deploying
       region: "eu-west-2"
