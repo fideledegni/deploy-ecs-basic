@@ -83,7 +83,7 @@ resources:
     integration: aws-iam-integration
     pointer:
       sourceName : "deploy-ecs-basic" #name of the cluster to which we are deploying
-      region: "eu-west-2"
+      region: "eu-west-3"
 
 
 jobs:
