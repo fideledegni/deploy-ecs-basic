@@ -3,9 +3,9 @@ language: node_js
 
 # # use this to control what branches get built.
 # # http://docs.shippable.com/ci/advancedOptions/branches/
-# branches:
-#   only:
-#     - master
+branches:
+  only:
+    - master
 
 
 # using pre-defined build variables
@@ -45,7 +45,7 @@ integrations:
   # http://docs.shippable.com/platform/integration/aws-keys/
   hub:
     - integrationName: aws-keys-integration
-      type: amazonKeys
+      type: ecr
 
 
 resources:
