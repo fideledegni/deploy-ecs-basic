@@ -45,7 +45,9 @@ integrations:
   # http://docs.shippable.com/platform/integration/aws-keys/
   hub:
     - integrationName: aws-keys-integration
+      # type: amazonKeys
       type: ecr
+      region: eu-west-3
 
 
 resources:
